@@ -83,7 +83,7 @@ int main(int argc, char* argv[]) {
         printf("exit - to exit the program\n");
 
         memset(command, 0, sizeof(command));
-        gets(command); // Используйте fgets в реальных программах для защиты от переполнения буфера
+        fgets(command, 100, stdin); // Используйте fgets в реальных программах для защиты от переполнения буфера
 
         char* cmd = strtok(command, " ");
         char* filename = strtok(NULL, " ");
